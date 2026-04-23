@@ -161,7 +161,7 @@ return {
   -- ── mini.animate — анимации прыжков курсора ───────────────────────
   -- j/k при большом прыжке — плавная дуга вместо телепорта
   {
-    "echasnovski/mini.animate",
+    "nvim-mini/mini.animate",
     event = "VeryLazy",
     opts  = function(_, opts)
       local animate  = require("mini.animate")
