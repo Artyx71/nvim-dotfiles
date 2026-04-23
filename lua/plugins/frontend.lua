@@ -258,7 +258,12 @@ return {
   {
     "nvim-treesitter/nvim-treesitter",
     opts = function(_, opts)
+      -- Ставим parser_install_dir явно чтобы nvim-treesitter парсеры
+      -- грузились раньше системных (фикс "tab" node конфликта в nvim 0.11)
+      opts.parser_install_dir = vim.fn.stdpath("data") .. "/site"
+
       vim.list_extend(opts.ensure_installed or {}, {
+        "vim",  -- явно переустанавливаем vim parser (системный — старый)
         "html", "css", "scss",
         "javascript", "typescript", "tsx",
         "vue", "svelte",
