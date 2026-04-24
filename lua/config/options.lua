@@ -26,3 +26,8 @@ vim.opt.showmode = false  -- LazyVim уже скрывает, но явно
 
 -- Широкий signcolumn — меньше дёрганий при появлении диагностики
 vim.opt.signcolumn = "yes:1"
+
+-- Tab → 4 пробела (вне сниппетов)
+vim.opt.expandtab = true
+vim.opt.shiftwidth = 4
+vim.opt.tabstop = 4
