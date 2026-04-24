@@ -10,15 +10,20 @@ return {
       snippets = {
         preset = "luasnip",
       },
+      completion = {
+        trigger = {
+          prefixLength = 0,  -- отключить автотриггер, только Ctrl+Space
+        },
+      },
       keymap = {
         preset = "enter",
         -- Enter  → принять сниппет / автокомплит
         -- Tab    → следующий placeholder внутри сниппета
         -- S-Tab  → предыдущий placeholder
-        -- C-e    → закрыть меню (blink default, теперь свободен)
         ["<Tab>"]   = { "snippet_forward", "fallback" },
         ["<S-Tab>"] = { "snippet_backward", "fallback" },
         ["<C-y>"]   = { "select_and_accept" },
+        ["<C-Space>"] = { "show", "show_documentation", "hide_documentation" },
       },
     },
   },
