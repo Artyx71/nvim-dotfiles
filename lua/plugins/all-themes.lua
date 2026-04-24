@@ -4,7 +4,7 @@ return {
     "folke/tokyonight.nvim",
     priority = 1000,
     opts = {
-      style = "night",  -- "night" | "storm" | "day"
+      style = "day",    -- "night" | "storm" | "day"
       transparent = false,
     },
   },
