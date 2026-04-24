@@ -151,6 +151,38 @@ Philosophy: zero friction, zen flow, keyboard-only.
 | `vprops` | `defineProps<{}>()` |
 | `vonmounted` | `onMounted(() => {})` |
 
+### Surround (mini.surround)
+
+| Key | Action |
+|---|---|
+| `cs"'` | Смени " на ' |
+| `ds"` | Удали " |
+| `ys2w"` | Добавь " вокруг 2 слов |
+
+### Текстобъекты (mini.ai)
+
+| Объект | Пример |
+|---|---|
+| `di(` | Удали всё внутри () (вложенность работает) |
+| `va[` | Выбери всё + скобки [] |
+| `ci"` | Смени содержимое "" |
+
+### Flash jump (flash.nvim)
+
+| Key | Action |
+|---|---|
+| `s` | Поиск + прыжок — видно все совпадения |
+| `S` | По tree-sitter нодам |
+| `r` | Operator-pending (после d/c/y) |
+
+### Comment (mini.comment)
+
+| Key | Action |
+|---|---|
+| `gcc` | Комментируй строку |
+| `gc2j` | Комментируй 2 строки вниз |
+| `gc` | Комментируй выделение |
+
 ### Emmet (Insert mode)
 
 | Key | Action |
