@@ -12,7 +12,7 @@ return {
   --
   --   <leader>a          → добавить текущий файл в список
   --   <leader>H          → открыть меню со списком
-  --   <C-h/t/n/s>        → прыгнуть на файл 1/2/3/4
+  --   <C-1/2/3/4>        → прыгнуть на файл 1/2/3/4
   {
     "ThePrimeagen/harpoon",
     branch = "harpoon2",
@@ -22,10 +22,10 @@ return {
       return {
         { "<leader>a",  function() harpoon:list():add() end,                        desc = "Harpoon: добавить файл" },
         { "<leader>H",  function() harpoon.ui:toggle_quick_menu(harpoon:list()) end, desc = "Harpoon: меню" },
-        { "<C-h>",      function() harpoon:list():select(1) end,                    desc = "Harpoon: файл 1" },
-        { "<C-t>",      function() harpoon:list():select(2) end,                    desc = "Harpoon: файл 2" },
-        { "<C-n>",      function() harpoon:list():select(3) end,                    desc = "Harpoon: файл 3" },
-        { "<C-s>",      function() harpoon:list():select(4) end,                    desc = "Harpoon: файл 4" },
+        { "<C-1>",      function() harpoon:list():select(1) end,                    desc = "Harpoon: файл 1" },
+        { "<C-2>",      function() harpoon:list():select(2) end,                    desc = "Harpoon: файл 2" },
+        { "<C-3>",      function() harpoon:list():select(3) end,                    desc = "Harpoon: файл 3" },
+        { "<C-4>",      function() harpoon:list():select(4) end,                    desc = "Harpoon: файл 4" },
         { "<C-S-h>",    function() harpoon:list():prev() end,                       desc = "Harpoon: предыдущий" },
         { "<C-S-l>",    function() harpoon:list():next() end,                       desc = "Harpoon: следующий" },
       }
@@ -52,8 +52,8 @@ return {
     event = "BufReadPost",
     init = function()
       vim.g.VM_maps = {
-        ["Find Under"]         = "<C-d>",   -- как VSCode Ctrl+D
-        ["Find Subword Under"] = "<C-d>",
+        ["Find Under"]         = "<M-d>",   -- Alt+D (не конфликтует с Ctrl+D smooth scroll)
+        ["Find Subword Under"] = "<M-d>",
         ["Add Cursor Down"]    = "<C-S-j>",
         ["Add Cursor Up"]      = "<C-S-k>",
         ["Select All"]         = "<C-S-l>",
@@ -98,26 +98,6 @@ return {
     },
   },
 
-  -- ── LEGENDARY — палитра команд как в VSCode (Cmd+Shift+P) ─────────
-  -- Все команды, keymaps, autocmds — одним поиском.
-  -- Никогда не вспоминаешь хоткей — просто ищешь по смыслу.
-  --
-  --   <C-p>   → открыть палитру
-  {
-    "mrjones2014/legendary.nvim",
-    dependencies = { "kkharji/sqlite.lua" },
-    priority = 10000,
-    lazy     = false,
-    keys     = {
-      { "<C-p>", "<cmd>Legendary<cr>", desc = "Command Palette" },
-    },
-    opts = {
-      extensions = {
-        lazy_nvim    = true,
-        which_key    = { auto_register = true },
-      },
-    },
-  },
 
   -- ── PERSISTENCE — восстановление сессии ──────────────────────────
   -- Закрыл nvim → открыл → всё на месте: файлы, сплиты, позиции.
