@@ -5,7 +5,7 @@ return {
   -- ds"   → удали "
   -- ys2w" → добавь " вокруг 2 слов
   {
-    "echasnovski/mini.surround",
+    "nvim-mini/mini.surround",
     event = "VeryLazy",
     opts = {
       mappings = {
@@ -24,7 +24,7 @@ return {
   -- ── mini.ai — расширенные текстобъекты ──────────────────────────
   -- di( da[ vi" va' работают лучше, поддерживают вложенность
   {
-    "echasnovski/mini.ai",
+    "nvim-mini/mini.ai",
     event = "VeryLazy",
     opts = {
       n_lines = 500,
@@ -72,7 +72,7 @@ return {
   -- gc   → комментируй выделение
   -- gc   → в motion: gc2j комментируй 2 строки вниз
   {
-    "echasnovski/mini.comment",
+    "nvim-mini/mini.comment",
     event = "VeryLazy",
     opts = {
       options = {
