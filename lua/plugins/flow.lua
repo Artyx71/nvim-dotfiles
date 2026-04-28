@@ -116,4 +116,11 @@ return {
       { "<leader>qd", function() require("persistence").stop() end,                desc = "Не сохранять сессию" },
     },
   },
+
+  -- ── VIM BE GOOD — тренажёр vim motions ───────────────────────────
+  -- :VimBeGood → открывает игры для практики движений
+  {
+    "ThePrimeagen/vim-be-good",
+    cmd = "VimBeGood",
+  },
 }
