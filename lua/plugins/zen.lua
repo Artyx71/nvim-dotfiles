@@ -14,8 +14,8 @@ return {
         height   = 1,
         options  = {
           signcolumn     = "no",
-          number         = false,
-          relativenumber = false,
+          number         = true,
+          relativenumber = true,
           cursorline     = false,
           foldcolumn     = "0",
           list           = false,
