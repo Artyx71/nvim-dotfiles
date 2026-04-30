@@ -29,6 +29,7 @@ vim.opt.showmode = false  -- LazyVim уже скрывает, но явно
 vim.opt.signcolumn = "yes:1"
 
 -- Tab → настоящие табы (символ Tab, не пробелы)
-vim.opt.expandtab = false
-vim.opt.shiftwidth = 4
-vim.opt.tabstop = 4
+vim.opt.expandtab    = false
+vim.opt.shiftwidth   = 4
+vim.opt.tabstop      = 4
+vim.opt.softtabstop  = 4
