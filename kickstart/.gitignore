@@ -1,0 +1,10 @@
+tags
+test.sh
+.luarc.json
+nvim
+
+spell/
+
+# Track plugin revisions in this personal config for reproducible installs.
+
+.DS_Store
